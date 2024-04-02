@@ -1,0 +1,35 @@
+.footer-container {
+    min-height: 3rem;
+    position: relative;
+    margin-top: 2rem;
+    background: rgba(0, 8, 56, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container p{
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footer-container::after {
+    content: '';
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #5784ff;
+    position: absolute;
+    z-index: -1;
+    filter: blur(200px);
+    bottom: 0rem;
+    right: 0rem;
+}
+
+@media (max-width: 600px) {
+    .footer-container::after {
+        display: none;
+    }
+}

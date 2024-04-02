@@ -1,0 +1,266 @@
+/* CSS untuk efek mengetik */
+
+.typing {
+    display: block;
+}
+
+.typed-cursor {
+    display: none; /* Menghilangkan tampilan dari kursor */
+}
+
+.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.hero-container::after,
+.hero-container::before {
+    content: '';
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #5784ff;
+    position: absolute;
+    z-index: -1;
+    filter: blur(200px);
+}
+
+.hero-container::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.hero-container::before {
+    bottom: 2rem;
+    right: 0rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hero-content h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.picture {
+    border-radius: 0.65rem;
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-img div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+
+.design-icon img {
+    cursor: pointer;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 4rem;
+    height: auto;
+    transition: all 0.3s ease;
+    
+}
+
+.hero-img > div > img:hover {
+    transform: translateY(-0.5rem);
+    border-radius: 0.65rem;
+    border: 2px solid #2667C4;
+    box-shadow: 0 0 10px 5px #2667C4;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 2.25rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-portfolio {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(25deg, #2667C4, #000ba8);
+    padding: 0.6rem 2rem;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-portfolio:hover {
+    color: #2667C4;
+    background: #fff;
+    border-radius: 0.2rem;
+    outline: 2px solid #2667C4;
+    box-shadow: 0 0 10px 8px #2667C4;
+    transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;
+}
+
+@media (max-width: 1025px) {
+    .hero-container {
+        padding-left: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-img img {
+        width: 18rem;
+    }
+
+    .design-icon img {
+        width: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .hero-img {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hero-content h2 {
+        margin-top: 2rem;
+        width: 16rem;
+    }
+
+    .portfolio-container,
+    .hero-content h2,
+    .hero-content p,
+    .hero-content h3 {
+        width: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        content: '';
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .hero-container::after {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before {
+        bottom: 2rem;
+        right: 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-container {
+        padding: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .portfolio-container {
+        flex-direction: column;
+    }
+
+    .btn-portfolio {
+        bottom: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .hero-content h2 {
+        margin-bottom: 2rem;
+    }
+
+    .typing {
+        height: 6rem;
+    }
+
+    .design-icon img {
+        width: 3.5rem;
+    }
+}
