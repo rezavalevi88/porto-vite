@@ -35,7 +35,7 @@ const Hero = () => {
     return (
         <section id='hero' className="hero-container">
             <div className="hero-content">
-                <h3>Hello 👋,<br />I'm Reza Valevi</h3>
+                <h3>Hello 👋,<br />I'm Reza Valevi p</h3>
                 <h2 className="typing"></h2>
                 <p>I am a Graphic Designer who began my career 
                     in 2017 and ventured into entrepreneurship 
